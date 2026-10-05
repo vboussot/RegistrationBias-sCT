@@ -1,0 +1,51 @@
+\providecommand{\mstd}[3]{\shortstack{#1$^{#3}$\\[0.4ex]{\scriptsize$\pm$#2}}}
+\providecommand{\bmstd}[3]{\shortstack{\textbf{#1}$^{#3}$\\[0.4ex]{\scriptsize\textbf{$\pm$#2}}}}
+\begin{table}[t]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2pt}
+\renewcommand{\arraystretch}{1.25}
+\begin{tabular}{lcccccccccccc}
+\toprule
+ & \multicolumn{6}{c}{IMPACT} & \multicolumn{6}{c}{ELX} \\
+\cmidrule(lr){2-7} \cmidrule(lr){8-13}
+Region & \multicolumn{3}{c}{IMPACT} & \multicolumn{3}{c}{ELX} & \multicolumn{3}{c}{IMPACT} & \multicolumn{3}{c}{ELX} \\
+\cmidrule(lr){2-4} \cmidrule(lr){5-7} \cmidrule(lr){8-10} \cmidrule(lr){11-13}
+ & MAE & PSNR & SSIM & MAE & PSNR & SSIM & MAE & PSNR & SSIM & MAE & PSNR & SSIM \\
+\midrule
+AB ($n=32$) & \bmstd{55.30}{14.14}{} & \bmstd{31.17}{2.40}{} & \bmstd{0.928}{0.023}{} & \mstd{67.10}{13.71}{***} & \mstd{28.96}{1.65}{***} & \mstd{0.909}{0.030}{***} & \mstd{62.96}{13.70}{***} & \mstd{29.88}{1.79}{***} & \mstd{0.910}{0.031}{***} & \mstd{59.08}{10.64}{} & \mstd{30.12}{1.57}{*} & \mstd{0.920}{0.025}{**} \\
+HN ($n=37$) & \bmstd{64.84}{14.73}{} & \bmstd{30.20}{2.07}{} & \bmstd{0.950}{0.019}{} & \mstd{77.18}{17.73}{***} & \mstd{28.33}{1.94}{***} & \mstd{0.935}{0.024}{***} & \mstd{71.74}{16.89}{***} & \mstd{29.40}{2.09}{***} & \mstd{0.938}{0.025}{***} & \mstd{68.55}{13.92}{**} & \mstd{29.29}{1.89}{**} & \mstd{0.943}{0.020}{***} \\
+TH ($n=34$) & \bmstd{55.40}{15.43}{} & \bmstd{32.21}{2.69}{} & \bmstd{0.930}{0.018}{} & \mstd{62.41}{12.66}{**} & \mstd{30.15}{1.95}{***} & \mstd{0.913}{0.028}{***} & \mstd{61.72}{16.16}{***} & \mstd{31.02}{2.45}{***} & \mstd{0.912}{0.023}{***} & \mstd{55.43}{12.51}{} & \mstd{31.32}{2.15}{*} & \mstd{0.925}{0.024}{} \\
+AB/HN/TH ($n=103$) & \bmstd{58.76}{15.47}{} & \bmstd{31.16}{2.53}{} & \bmstd{0.937}{0.022}{} & \mstd{69.17}{16.24}{***} & \mstd{29.13}{2.01}{***} & \mstd{0.920}{0.030}{***} & \mstd{65.70}{16.36}{***} & \mstd{30.08}{2.24}{***} & \mstd{0.921}{0.030}{***} & \mstd{61.28}{13.72}{**} & \mstd{30.22}{2.07}{***} & \mstd{0.930}{0.025}{***} \\
+\addlinespace[0.25em]
+\hline
+\hline
+\addlinespace[0.25em]
+brain ($n=26$) & \mstd{172.26}{133.75}{} & \mstd{25.48}{5.71}{} & \mstd{0.852}{0.090}{} & \mstd{181.60}{130.29}{***} & \mstd{24.51}{4.85}{***} & \mstd{0.836}{0.087}{***} & \bmstd{161.60}{115.44}{} & \bmstd{25.67}{5.33}{} & \bmstd{0.857}{0.078}{} & \mstd{171.53}{112.68}{} & \mstd{24.67}{4.43}{*} & \mstd{0.840}{0.076}{} \\
+pelvis ($n=21$) & \mstd{77.50}{58.79}{} & \bmstd{30.54}{5.11}{} & \mstd{0.857}{0.081}{} & \mstd{98.00}{53.80}{***} & \mstd{26.88}{3.12}{***} & \mstd{0.807}{0.077}{***} & \bmstd{69.51}{42.85}{} & \mstd{30.53}{3.65}{} & \bmstd{0.858}{0.057}{} & \mstd{93.66}{39.88}{*} & \mstd{26.97}{2.40}{**} & \mstd{0.804}{0.056}{***} \\
+brain/pelvis ($n=47$) & \mstd{129.92}{116.88}{} & \mstd{27.74}{6.00}{} & \mstd{0.854}{0.086}{} & \mstd{144.25}{111.41}{***} & \mstd{25.57}{4.33}{***} & \mstd{0.823}{0.084}{***} & \bmstd{120.45}{101.43}{} & \bmstd{27.84}{5.25}{} & \bmstd{0.857}{0.069}{} & \mstd{136.74}{96.09}{} & \mstd{25.70}{3.84}{***} & \mstd{0.824}{0.070}{***} \\
+\bottomrule
+\end{tabular}
+\caption{Mean evaluation metrics by in-distribution region for Task 2 supervised CV experiments. Values report mean $\pm$ standard deviation. Column groups indicate the registration method used to train the images (IMPACT or ELX), and subgroups indicate the registration method used for evaluation. Best mean values per row are shown in bold. Stars indicate paired Wilcoxon tests against IMPACT/MAE_IMPACT on matched patients (* $p<0.05$, ** $p<0.01$, *** $p<0.001$).}
+\label{tab:task2_cv_region_metrics_in_distribution}
+\end{table}
+\renewcommand{\arraystretch}{1}
+
+\begin{table}[t]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lcccccc}
+\toprule
+ & \multicolumn{3}{c}{IMPACT} & \multicolumn{3}{c}{ELX} \\
+\cmidrule(lr){2-4} \cmidrule(lr){5-7}
+Region & MAE & PSNR & SSIM & MAE & PSNR & SSIM \\
+\midrule
+AB_ood ($n=32$) & \bmstd{60.41}{14.83}{} & \bmstd{30.32}{1.87}{} & \bmstd{0.927}{0.016}{} & \mstd{71.09}{13.12}{***} & \mstd{28.68}{1.30}{***} & \mstd{0.915}{0.014}{***} \\
+HN_ood ($n=37$) & \bmstd{136.18}{30.01}{} & \bmstd{24.10}{2.05}{} & \bmstd{0.901}{0.029}{} & \mstd{149.66}{28.91}{***} & \mstd{23.45}{1.65}{***} & \mstd{0.892}{0.031}{***} \\
+TH_ood ($n=34$) & \bmstd{95.99}{44.86}{} & \bmstd{27.38}{3.26}{} & \bmstd{0.885}{0.062}{} & \mstd{109.15}{49.65}{***} & \mstd{26.34}{2.93}{***} & \mstd{0.870}{0.067}{***} \\
+\bottomrule
+\end{tabular}
+\caption{Mean evaluation metrics by out-of-distribution region for Task 2 supervised CV experiments. Values report mean $\pm$ standard deviation. Column groups indicate the registration method (IMPACT or ELX). Best mean values per row are shown in bold. Stars indicate paired Wilcoxon tests against IMPACT on matched patients (* $p<0.05$, ** $p<0.01$, *** $p<0.001$).}
+\label{tab:task2_cv_region_metrics_ood}
+\end{table}

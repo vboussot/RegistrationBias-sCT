@@ -1,0 +1,6 @@
+# Use in a separate environment; this distribution supplies Transformix APIs.
+numpy==1.26.4
+SimpleITK-SimpleElastix==2.0.0rc2.dev910
+# Imported by scripts/registration_controls (metrics and curves).
+scikit-image==0.25.2
+matplotlib==3.10.1

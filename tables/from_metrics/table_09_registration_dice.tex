@@ -1,0 +1,32 @@
+\begin{table}[t]
+\centering
+\caption{Registration\_ELX\_IMPACT segmentation results on the train split. Dice is computed per patient as the mean over the same retained labels as in the combined CV IMPACT MAE/VGG/SAM comparison: Task 1 uses labels shared across criteria with Dice $> 0.1$ in all compared criteria, while Task 2 uses only labels shared across criteria. Values are then summarized as mean $\pm$ std across patients.}
+\label{tab:registration-elx-impact-seg}
+\begin{tabular}{llcc}
+\toprule
+Task & Region & $N$ & Dice $\uparrow$ \\
+\midrule
+\multicolumn{4}{l}{\textit{Task 1: AB / HN / TH}} \\
+Task 1 & AB & 22 & $0.839 \pm 0.040$ \\
+Task 1 & HN & 21 & $0.818 \pm 0.072$ \\
+Task 1 & TH & 23 & $0.803 \pm 0.046$ \\
+Task 1 & AB/HN/TH overall & 66 & $0.820 \pm 0.056$ \\
+\midrule
+\multicolumn{4}{l}{\textit{Task 1: brain / pelvis}} \\
+Task 1 & brain & 27 & $0.918 \pm 0.053$ \\
+Task 1 & pelvis & 23 & $0.849 \pm 0.044$ \\
+Task 1 & brain/pelvis overall & 50 & $0.886 \pm 0.060$ \\
+\midrule
+\multicolumn{4}{l}{\textit{Task 2: AB / HN / TH}} \\
+Task 2 & AB & 32 & $0.745 \pm 0.058$ \\
+Task 2 & HN & 37 & $0.749 \pm 0.082$ \\
+Task 2 & TH & 34 & $0.784 \pm 0.066$ \\
+Task 2 & AB/HN/TH overall & 103 & $0.759 \pm 0.072$ \\
+\midrule
+\multicolumn{4}{l}{\textit{Task 2: brain / pelvis}} \\
+Task 2 & brain & 26 & $0.872 \pm 0.087$ \\
+Task 2 & pelvis & 21 & $0.858 \pm 0.090$ \\
+Task 2 & brain/pelvis overall & 47 & $0.866 \pm 0.089$ \\
+\bottomrule
+\end{tabular}
+\end{table}

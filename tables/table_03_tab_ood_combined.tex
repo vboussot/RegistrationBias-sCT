@@ -1,0 +1,55 @@
+\begin{table}[h!]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{4pt}
+\caption{
+Quantitative results on out-of-distribution (OOD) regions for Task 1 and Task 2 in supervised cross-validation experiments. Mean $\pm$ standard deviation of commonly used image similarity metrics (MAE, PSNR, SSIM) are reported. Column groups indicate the models used (IMPACT or ELX). Ext-T2 is the external T2-weighted MRI set; $AB_{\mathrm{sim}}$, $HN_{\mathrm{sim}}$, and $TH_{\mathrm{sim}}$ are the registration-free simulated CBCT sets. Statistical comparisons against IMPACT follow the patient-level protocol described in Section~\ref{sec:statistics}.
+}
+\label{tab:ood_combined}
+\begin{tabular}{llcccccc}
+\toprule
+Task & Region & \multicolumn{3}{c}{IMPACT} & \multicolumn{3}{c}{ELX} \\
+\cmidrule(lr){3-5} \cmidrule(lr){6-8}
+ &  & MAE & PSNR & SSIM & MAE & PSNR & SSIM \\
+\midrule
+
+\multirow{1}{*}{T1} 
+& Ext-T2
+& \bmstd{88.54}{12.51}{} 
+& \bmstd{26.82}{0.91}{} 
+& \bmstd{0.899}{0.025}{} 
+& \mstd{97.43}{14.83}{***} 
+& \mstd{26.19}{0.87}{***} 
+& \mstd{0.889}{0.031}{***} \\
+
+\midrule
+
+\multirow{3}{*}{T2}
+& $AB_{\mathrm{sim}}$
+& \bmstd{60.41}{14.83}{} 
+& \bmstd{30.32}{1.87}{} 
+& \bmstd{0.927}{0.016}{} 
+& \mstd{71.09}{13.12}{***} 
+& \mstd{28.68}{1.30}{***} 
+& \mstd{0.915}{0.014}{***} \\
+
+& $HN_{\mathrm{sim}}$
+& \bmstd{136.18}{30.01}{} 
+& \bmstd{24.10}{2.05}{} 
+& \bmstd{0.901}{0.029}{} 
+& \mstd{149.66}{28.91}{***} 
+& \mstd{23.45}{1.65}{***} 
+& \mstd{0.892}{0.031}{***} \\
+
+& $TH_{\mathrm{sim}}$
+& \bmstd{95.99}{44.86}{} 
+& \bmstd{27.38}{3.26}{} 
+& \bmstd{0.885}{0.062}{} 
+& \mstd{109.15}{49.65}{***} 
+& \mstd{26.34}{2.93}{***} 
+& \mstd{0.870}{0.067}{***} \\
+
+\bottomrule
+\end{tabular}
+
+\end{table}

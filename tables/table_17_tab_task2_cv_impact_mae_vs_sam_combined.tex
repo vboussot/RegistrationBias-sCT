@@ -1,0 +1,30 @@
+\begin{table*}[h!]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.2}
+\caption{
+Quantitative results for Task 2 using IMPACT-based training, comparing models trained with MAE, VGG-based perceptual, and SAM-based losses. Dice evaluates downstream segmentation performance, while SSIM measures image similarity between synthesized CT and reference CT. Values are reported as mean $\pm$ standard deviation. Statistical comparisons against SAM follow the patient-level protocol described in Section~\ref{sec:statistics}. $AB_{\mathrm{sim}}$, $HN_{\mathrm{sim}}$, and $TH_{\mathrm{sim}}$ correspond to the registration-free simulated CBCT evaluations.
+}
+\label{tab:task2_cv_impact_mae_vs_sam_combined}
+\begin{tabular}{lcccccc}
+\toprule
+ & \multicolumn{2}{c}{MAE\_IMPACT} & \multicolumn{2}{c}{VGG\_IMPACT} & \multicolumn{2}{c}{SAM\_IMPACT} \\
+\cmidrule(lr){2-3} \cmidrule(lr){4-5} \cmidrule(lr){6-7}
+Region & Dice & SSIM & Dice & SSIM & Dice & SSIM \\
+\midrule
+AB & \mstd{0.642}{0.086}{***} & \bmstd{0.928}{0.023}{***} & \mstd{0.640}{0.083}{***} & \mstd{0.925}{0.024}{} & \bmstd{0.670}{0.086}{} & \mstd{0.925}{0.024}{} \\
+HN & \bmstd{0.720}{0.078}{***} & \bmstd{0.950}{0.019}{***} & \mstd{0.697}{0.083}{***} & \mstd{0.943}{0.022}{} & \mstd{0.708}{0.076}{} & \mstd{0.943}{0.022}{} \\
+TH & \mstd{0.718}{0.076}{} & \bmstd{0.930}{0.018}{***} & \mstd{0.709}{0.076}{***} & \mstd{0.928}{0.019}{} & \bmstd{0.720}{0.077}{} & \mstd{0.927}{0.020}{} \\
+AB/HN/TH & \mstd{0.695}{0.088}{} & \bmstd{0.937}{0.022}{***} & \mstd{0.683}{0.086}{***} & \mstd{0.932}{0.023}{} & \bmstd{0.700}{0.082}{} & \mstd{0.932}{0.023}{} \\
+\addlinespace[0.25em]
+\hline
+\hline
+\addlinespace[0.25em]
+$AB_{\mathrm{sim}}$ & \mstd{0.709}{0.085}{***} & \mstd{0.927}{0.016}{***} & \mstd{0.723}{0.077}{***} & \mstd{0.921}{0.016}{***} & \bmstd{0.764}{0.079}{} & \bmstd{0.932}{0.015}{} \\
+$HN_{\mathrm{sim}}$ & \mstd{0.734}{0.065}{***} & \mstd{0.901}{0.029}{***} & \mstd{0.750}{0.061}{*} & \mstd{0.902}{0.028}{***} & \bmstd{0.755}{0.063}{} & \bmstd{0.907}{0.028}{} \\
+$TH_{\mathrm{sim}}$ & \mstd{0.722}{0.120}{***} & \mstd{0.885}{0.062}{***} & \mstd{0.741}{0.114}{***} & \mstd{0.888}{0.057}{***} & \bmstd{0.758}{0.110}{} & \bmstd{0.892}{0.059}{} \\
+\bottomrule
+\end{tabular}
+
+\end{table*}

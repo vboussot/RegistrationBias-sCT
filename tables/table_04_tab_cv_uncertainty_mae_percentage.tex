@@ -1,0 +1,30 @@
+\begin{table}[h!]
+\centering
+\small
+\setlength{\tabcolsep}{6pt}
+\renewcommand{\arraystretch}{1.15}
+\caption{
+Relative percentage increase of uncertainty for ELX compared to IMPACT. 
+Uncertainty is estimated as the variance across the 15 predictions per patient obtained from the five cross-validation models and three test-time augmentations. Ext-T2 denotes the external T2-weighted MRI set and Sim-CBCT the registration-free simulated CBCT set.
+}
+\label{tab:cv_uncertainty_mae_percentage}
+\begin{tabular}{lcc}
+\toprule
+Region & Task 1 & Task 2 \\
+\midrule
+AB & +41.2\% & +27.6\% \\
+HN & +20.7\% & +1.2\% \\
+TH & +20.7\% & +12.1\% \\
+AB/HN/TH & +29.7\% & +12.5\% \\
+\addlinespace[0.25em]
+\hline
+\hline
+\addlinespace[0.25em]
+Brain & +2.7\% & -- \\
+Pelvis & +116.1\% & --\\
+Ext-T2 & +61.8\% & -- \\
+Sim-CBCT & -- & +1.8\% \\
+\bottomrule
+\end{tabular}
+
+\end{table}

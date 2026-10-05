@@ -1,0 +1,24 @@
+\begin{table*}[h!]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2pt}
+\renewcommand{\arraystretch}{1.25}
+\caption{Quantitative results for Task 2 (supervised cross-validation) across anatomical regions. Mean $\pm$ standard deviation of commonly used image similarity metrics (MAE, PSNR, SSIM) are reported. Column groups indicate the registration method used during training (IMPACT or ELX), while subgroups correspond to the registration method used for evaluation. All regions correspond to in-distribution data used during training. Statistical comparisons against IMPACT/IMPACT configuration follow the patient-level protocol described in Section~\ref{sec:statistics}.
+}
+\label{tab:task2_cv_region_metrics_in_distribution}
+\begin{tabular}{lcccccccccccc}
+\toprule
+ & \multicolumn{6}{c}{IMPACT} & \multicolumn{6}{c}{ELX} \\
+\cmidrule(lr){2-7} \cmidrule(lr){8-13}
+Region & \multicolumn{3}{c}{IMPACT} & \multicolumn{3}{c}{ELX} & \multicolumn{3}{c}{IMPACT} & \multicolumn{3}{c}{ELX} \\
+\cmidrule(lr){2-4} \cmidrule(lr){5-7} \cmidrule(lr){8-10} \cmidrule(lr){11-13}
+ & MAE & PSNR & SSIM & MAE & PSNR & SSIM & MAE & PSNR & SSIM & MAE & PSNR & SSIM \\
+\midrule
+AB & \bmstd{55.30}{14.14}{} & \bmstd{31.17}{2.40}{} & \bmstd{0.928}{0.023}{} & \mstd{67.10}{13.71}{***} & \mstd{28.96}{1.65}{***} & \mstd{0.909}{0.030}{***} & \mstd{62.96}{13.70}{***} & \mstd{29.88}{1.79}{***} & \mstd{0.910}{0.031}{***} & \mstd{59.08}{10.64}{} & \mstd{30.12}{1.57}{*} & \mstd{0.920}{0.025}{**} \\
+HN & \bmstd{64.84}{14.73}{} & \bmstd{30.20}{2.07}{} & \bmstd{0.950}{0.019}{} & \mstd{77.18}{17.73}{***} & \mstd{28.33}{1.94}{***} & \mstd{0.935}{0.024}{***} & \mstd{71.74}{16.89}{***} & \mstd{29.40}{2.09}{***} & \mstd{0.938}{0.025}{***} & \mstd{68.55}{13.92}{**} & \mstd{29.29}{1.89}{**} & \mstd{0.943}{0.020}{***} \\
+TH & \bmstd{55.40}{15.43}{} & \bmstd{32.21}{2.69}{} & \bmstd{0.930}{0.018}{} & \mstd{62.41}{12.66}{**} & \mstd{30.15}{1.95}{***} & \mstd{0.913}{0.028}{***} & \mstd{61.72}{16.16}{***} & \mstd{31.02}{2.45}{***} & \mstd{0.912}{0.023}{***} & \mstd{55.43}{12.51}{} & \mstd{31.32}{2.15}{*} & \mstd{0.925}{0.024}{} \\
+AB/HN/TH & \bmstd{58.76}{15.47}{} & \bmstd{31.16}{2.53}{} & \bmstd{0.937}{0.022}{} & \mstd{69.17}{16.24}{***} & \mstd{29.13}{2.01}{***} & \mstd{0.920}{0.030}{***} & \mstd{65.70}{16.36}{***} & \mstd{30.08}{2.24}{***} & \mstd{0.921}{0.030}{***} & \mstd{61.28}{13.72}{**} & \mstd{30.22}{2.07}{***} & \mstd{0.930}{0.025}{***} \\
+\bottomrule
+\end{tabular}
+
+\end{table*}

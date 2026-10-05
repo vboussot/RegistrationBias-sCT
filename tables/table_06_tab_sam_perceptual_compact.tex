@@ -1,0 +1,57 @@
+\begin{table*}[h!]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.15}
+\caption{Aggregate performance of models trained with MAE or SAM-based supervision and evaluated with ELX references. Mean CV denotes the patient-level performance averaged across the five individual cross-validation models, whereas CV ensemble denotes performance after voxel-wise averaging of their predictions. $d_{\mathrm{SAM}}$ and LPIPS values are multiplied by 100 for readability. Complete region-wise results and statistical comparisons are provided in Appendix~\ref{app:perceptual_results}.}
+\label{tab:sam_perceptual_compact}
+\begin{tabular}{lllcccccc}
+\toprule
+& & & \multicolumn{3}{c}{MAE supervision}
+& \multicolumn{3}{c}{SAM supervision} \\
+\cmidrule(lr){4-6} \cmidrule(lr){7-9}
+Task & Set & Prediction
+& MAE $\downarrow$ & $d_{\mathrm{SAM}}\downarrow$ & LPIPS $\downarrow$
+& MAE $\downarrow$ & $d_{\mathrm{SAM}}\downarrow$ & LPIPS $\downarrow$ \\
+\midrule
+\multirow{4}{*}{Task 1}
+& \multirow{2}{*}{AB/HN/TH}
+& Mean CV
+& \textbf{70.75} & 24.27 & 8.34
+& 78.26 & \textbf{18.99} & \textbf{7.06} \\
+&
+& CV ensemble
+& \textbf{66.98} & 24.31 & 8.22
+& 73.21 & \textbf{19.85} & \textbf{7.03} \\
+\cmidrule(lr){2-9}
+& \multirow{2}{*}{Ext-T2}
+& Mean CV
+& 104.39 & 37.43 & 13.82
+& \textbf{96.36} & \textbf{33.71} & \textbf{12.00} \\
+&
+& CV ensemble
+& 97.43 & 37.30 & 13.25
+& \textbf{90.14} & \textbf{35.93} & \textbf{11.79} \\
+\midrule
+\multirow{4}{*}{Task 2}
+& \multirow{2}{*}{AB/HN/TH}
+& Mean CV
+& \textbf{64.95} & 17.54 & 5.48
+& 69.52 & \textbf{13.99} & \textbf{4.69} \\
+&
+& CV ensemble
+& \textbf{61.28} & 17.88 & 5.40
+& 65.18 & \textbf{14.36} & \textbf{4.59} \\
+\cmidrule(lr){2-9}
+& \multirow{2}{*}{Sim-CBCT}
+& Mean CV
+& 114.78 & 20.87 & 6.34
+& \textbf{109.23} & \textbf{17.94} & \textbf{5.31} \\
+&
+& CV ensemble
+& 111.88 & 20.67 & 6.15
+& \textbf{106.33} & \textbf{17.99} & \textbf{5.15} \\
+\bottomrule
+\end{tabular}
+
+\end{table*}

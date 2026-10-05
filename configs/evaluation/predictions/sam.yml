@@ -1,0 +1,35 @@
+# Calibrated SAM distance d_SAM (x100 in the tables).
+# Filled in by scripts/evaluate.py: reference image (CT or CT_ELX), prepared dataset, predictions
+# folder, patient list and run name.
+Evaluator:
+  metrics:
+    sCT:
+      targets_criterions:
+        CT:
+          criterions_loader:
+            impactsynth.metrics:SAM_Perceptual:
+              train: false
+  Dataset:
+    groups_src:
+      $target:
+        groups_dest:
+          CT:
+            transforms:
+              TensorCast:
+                dtype: float32
+                inverse: true
+              Statistics: {}
+      sCT:
+        groups_dest:
+          sCT:
+            transforms:
+              TensorCast:
+                dtype: float32
+                inverse: true
+              Statistics: {}
+    subset: $subset
+    dataset_filenames:
+    - $dataset:a:mha
+    - $predictions:i:mha
+    validation: None
+  train_name: $name

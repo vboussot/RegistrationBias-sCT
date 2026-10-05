@@ -1,0 +1,34 @@
+\begin{table*}[h!]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.2}
+\caption{Quantitative results for Task 1 using IMPACT-based training, comparing models trained with MAE, VGG-based perceptual, and SAM-based losses. Dice evaluates downstream segmentation performance, while SSIM measures image similarity between synthesized CT and reference CT. Values are reported as mean $\pm$ standard deviation across matched patients. Statistical comparisons against SAM follow the patient-level protocol described in Section~\ref{sec:statistics}.
+}
+\label{tab:task1_cv_impact_mae_vs_sam_combined}
+\begin{tabular}{lcccccc}
+\toprule
+ & \multicolumn{2}{c}{MAE} & \multicolumn{2}{c}{VGG} & \multicolumn{2}{c}{SAM} \\
+\cmidrule(lr){2-3} \cmidrule(lr){4-5} \cmidrule(lr){6-7}
+Region & Dice & SSIM & Dice & SSIM & Dice & SSIM \\
+\midrule
+AB & \mstd{0.737}{0.044}{***} & \bmstd{0.909}{0.022}{***} & \mstd{0.737}{0.046}{***} & \mstd{0.904}{0.023}{} & \bmstd{0.777}{0.043}{} & \mstd{0.905}{0.022}{} \\
+HN & \mstd{0.718}{0.067}{} & \bmstd{0.931}{0.027}{***} & \mstd{0.713}{0.067}{**} & \mstd{0.918}{0.033}{} & \bmstd{0.731}{0.060}{} & \mstd{0.914}{0.037}{} \\
+TH & \mstd{0.679}{0.041}{***} & \bmstd{0.941}{0.018}{***} & \mstd{0.687}{0.038}{***} & \mstd{0.934}{0.020}{**} & \bmstd{0.706}{0.031}{} & \mstd{0.938}{0.020}{} \\
+AB/HN/TH & \mstd{0.711}{0.057}{***} & \bmstd{0.927}{0.026}{***} & \mstd{0.712}{0.055}{***} & \mstd{0.919}{0.029}{} & \bmstd{0.738}{0.055}{} & \mstd{0.919}{0.030}{} \\
+\addlinespace[0.25em]
+\hline
+\hline
+\addlinespace[0.25em]
+Brain & \mstd{0.778}{0.121}{**} & \mstd{0.858}{0.021}{} & \mstd{0.813}{0.100}{} & \bmstd{0.859}{0.019}{} & \bmstd{0.816}{0.089}{} & \mstd{0.857}{0.022}{} \\
+Pelvis & \mstd{0.715}{0.120}{***} & \bmstd{0.850}{0.051}{} & \mstd{0.725}{0.115}{***} & \mstd{0.844}{0.046}{*} & \bmstd{0.795}{0.048}{} & \bmstd{0.850}{0.048}{} \\
+Brain/Pelvis & \mstd{0.749}{0.125}{***} & \bmstd{0.854}{0.038}{} & \mstd{0.772}{0.116}{***} & \mstd{0.852}{0.035}{} & \bmstd{0.806}{0.074}{} & \bmstd{0.854}{0.036}{} \\
+\addlinespace[0.25em]
+\hline
+\hline
+\addlinespace[0.25em]
+Ext-T2 & \mstd{0.665}{0.063}{***} & \mstd{0.899}{0.025}{*} & \mstd{0.672}{0.059}{***} & \bmstd{0.904}{0.023}{***} & \bmstd{0.725}{0.047}{} & \mstd{0.893}{0.032}{} \\
+\bottomrule
+\end{tabular}
+
+\end{table*}

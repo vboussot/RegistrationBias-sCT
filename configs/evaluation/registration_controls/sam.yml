@@ -1,0 +1,32 @@
+# Table 9 Reg. d_SAM (x100 in the table). Rendered by scripts/registration_controls/evaluate_registration_controls.py.
+Evaluator:
+  metrics:
+    CT_deformed:
+      targets_criterions:
+        CT:
+          criterions_loader:
+            impactsynth.metrics:SAM_Perceptual:
+              train: false
+  Dataset:
+    groups_src:
+      CT:
+        groups_dest:
+          CT:
+            transforms:
+              TensorCast:
+                dtype: float32
+                inverse: true
+              Statistics: {}
+      CT_deformed:
+        groups_dest:
+          CT_deformed:
+            transforms:
+              TensorCast:
+                dtype: float32
+                inverse: true
+              Statistics: {}
+    subset: None
+    dataset_filenames:
+    - $dataset:a:mha
+    validation: None
+  train_name: $name

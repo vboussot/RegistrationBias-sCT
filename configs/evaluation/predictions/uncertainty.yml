@@ -1,0 +1,31 @@
+# Mean, over the volume, of the variance of the 15 predictions of an ensemble (Uncertainty.mha,
+# written by scripts/predict.py), set to 0 outside the patient mask.
+# Filled in by scripts/evaluate.py: reference image (CT or CT_ELX), prepared dataset, predictions
+# folder, patient list and run name.
+Evaluator:
+  metrics:
+    Uncertainty:
+      targets_criterions:
+        None:
+          criterions_loader:
+            Mean:
+              name: Uncertainty
+  Dataset:
+    groups_src:
+      MASK:
+        groups_dest:
+          MASK:
+            transforms: None
+      Uncertainty:
+        groups_dest:
+          Uncertainty:
+            transforms:
+              Mask:
+                path: MASK
+                value_outside: 0
+    subset: $subset
+    dataset_filenames:
+    - $dataset:a:mha
+    - $predictions:i:mha
+    validation: None
+  train_name: $name

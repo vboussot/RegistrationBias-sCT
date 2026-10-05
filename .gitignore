@@ -1,0 +1,35 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+.env/
+.idea/
+.vscode/
+.DS_Store
+
+# Large inputs and generated files
+data/raw/
+data/processed/
+data/transforms/
+/artifacts/
+/predictions/
+models/external/
+models/checkpoints/
+results/generated/
+figures/generated/
+tables/generated/
+*.pt
+*.pth
+*.ckpt
+*.mha
+*.nii
+*.nii.gz
+*.dcm
+
+# Keep empty layout documentation
+!data/**/README.md
+!models/README.md

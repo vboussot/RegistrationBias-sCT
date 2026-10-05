@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite the paper below."
+title: "RegistrationBias-sCT: reproducibility package"
+type: software
+license: Apache-2.0
+authors:
+  - family-names: Boussot
+    given-names: Valentin
+  - family-names: Hémon
+    given-names: Cédric
+  - family-names: Lafond
+    given-names: Caroline
+  - family-names: Nunes
+    given-names: Jean-Claude
+  - family-names: Dillenseger
+    given-names: Jean-Louis
+version: 0.1.0
+preferred-citation:
+  type: article
+  title: "When Misalignment Becomes Supervision: Structured Label Noise in Supervised Synthetic CT Generation"
+  authors:
+    - family-names: Boussot
+      given-names: Valentin
+    - family-names: Hémon
+      given-names: Cédric
+    - family-names: Lafond
+      given-names: Caroline
+    - family-names: Nunes
+      given-names: Jean-Claude
+    - family-names: Dillenseger
+      given-names: Jean-Louis
+  year: 2026
+  doi: 10.48550/arXiv.2609.29387

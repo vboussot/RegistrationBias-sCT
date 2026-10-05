@@ -1,0 +1,19 @@
+\begin{table}[h!]
+\centering
+\footnotesize
+\caption{ELX- versus IMPACT-trained models on the public SynthRAD2025 validation set, as scored by the challenge server. Higher ELX scores reflect agreement with the ELX-consistent evaluation geometry, not established source-anatomy preservation.}
+\label{tab:public_split}
+\begin{tabular}{lcc|cc}
+\toprule
+\multirow{2}{*}{\textbf{Metric}} & \multicolumn{2}{c|}{\textbf{Task 1}} & \multicolumn{2}{c}{\textbf{Task 2}} \\
+ & \textbf{ELX} & \textbf{IMPACT} & \textbf{ELX} & \textbf{IMPACT} \\
+\midrule
+MAE  & 68.20 & 75.82 &       52.87 & 56.05 \\
+PSNR & 29.81 & 28.70 &  32.36 & 31.65 \\
+SSIM & 0.92 & 0.91 &        0.96 & 0.95 \\
+Dice & 0.72 & 0.70 &        0.83 & 0.82 \\
+HD95 & 8.42 & 8.89 &         5.40 & 5.41 \\
+\bottomrule
+\end{tabular}
+
+\end{table}

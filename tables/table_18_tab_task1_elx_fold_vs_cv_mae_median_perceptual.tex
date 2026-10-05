@@ -1,0 +1,29 @@
+\begin{table*}[h!]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.2}
+\caption{
+Quantitative results for Task 1 using models trained with ELX and evaluated with ELX, comparing MAE- and SAM-based training losses. “CV” denotes the ensemble prediction obtained by averaging the outputs of the five cross-validation models (CV$_0$–CV$_4$), while “Mean CV” corresponds to the average performance of the individual models. Performance is reported using MAE, $d_{\mathrm{SAM}}$, and LPIPS (mean $\pm$ standard deviation) computed on matched patients. $d_{\mathrm{SAM}}$ and LPIPS values are scaled by a factor of 100 for readability.
+}
+\label{tab:task1_elx_fold_vs_cv_mae_median_perceptual}
+\begin{tabular}{lcccccccccccc}
+\toprule
+Region & \multicolumn{6}{c}{Mean CV} & \multicolumn{6}{c}{CV} \\
+\cmidrule(lr){2-7} \cmidrule(lr){8-13}
+ & \multicolumn{3}{c}{MAE} & \multicolumn{3}{c}{SAM} & \multicolumn{3}{c}{MAE} & \multicolumn{3}{c}{SAM} \\
+\cmidrule(lr){2-4} \cmidrule(lr){5-7} \cmidrule(lr){8-10} \cmidrule(lr){11-13}
+ & MAE & SAM & LPIPS & MAE & SAM & LPIPS & MAE & SAM & LPIPS & MAE & SAM & LPIPS \\
+\midrule
+AB & \mstd{71.30}{14.44}{} & \mstd{32.54}{5.94}{} & \mstd{12.67}{3.42}{} & \mstd{74.00}{13.84}{} & \bmstd{25.64}{4.38}{} & \mstd{10.66}{2.79}{} & \bmstd{67.73}{14.25}{} & \mstd{32.46}{6.07}{} & \mstd{12.49}{3.35}{} & \mstd{69.35}{14.04}{} & \mstd{26.70}{4.50}{} & \bmstd{10.66}{2.81}{} \\
+HN & \mstd{83.51}{24.76}{} & \mstd{14.54}{2.37}{} & \mstd{3.46}{0.63}{} & \mstd{99.88}{33.98}{} & \bmstd{11.63}{1.76}{} & \mstd{3.11}{0.54}{} & \bmstd{78.98}{23.41}{} & \mstd{14.76}{2.37}{} & \mstd{3.41}{0.64}{} & \mstd{93.66}{33.16}{} & \mstd{11.96}{1.82}{} & \bmstd{3.05}{0.55}{} \\
+TH & \mstd{58.57}{10.54}{} & \mstd{25.25}{5.66}{} & \mstd{8.66}{2.88}{} & \mstd{62.60}{10.62}{} & \bmstd{19.35}{4.77}{} & \mstd{7.23}{2.33}{} & \bmstd{55.30}{10.14}{} & \mstd{25.24}{5.71}{} & \mstd{8.52}{2.86}{} & \mstd{58.22}{10.12}{} & \mstd{20.50}{5.19}{} & \bmstd{7.18}{2.41}{} \\
+AB/HN/TH & \mstd{70.75}{20.17}{} & \mstd{24.27}{8.83}{} & \mstd{8.34}{4.56}{} & \mstd{78.26}{26.66}{} & \bmstd{18.99}{6.88}{} & \mstd{7.06}{3.72}{} & \bmstd{66.98}{19.27}{} & \mstd{24.31}{8.77}{} & \mstd{8.22}{4.49}{} & \mstd{73.21}{25.84}{} & \mstd{19.85}{7.26}{} & \bmstd{7.03}{3.77}{} \\
+\addlinespace[0.25em]
+\hline
+\hline
+Ext-T2 & \mstd{104.39}{16.92}{} & \mstd{37.43}{4.39}{} & \mstd{13.82}{2.95}{} & \mstd{96.36}{15.38}{} & \bmstd{33.71}{3.86}{} & \mstd{12.00}{2.51}{} & \mstd{97.43}{14.83}{} & \mstd{37.30}{4.17}{} & \mstd{13.25}{2.95}{} & \bmstd{90.14}{14.09}{} & \mstd{35.93}{3.93}{} & \bmstd{11.79}{2.58}{} \\
+\bottomrule
+\end{tabular}
+
+\end{table*}

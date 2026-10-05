@@ -1,0 +1,48 @@
+# Table 9 Reg. LPIPS (x100 in the table). Rendered by scripts/registration_controls/evaluate_registration_controls.py.
+Evaluator:
+  metrics:
+    CT_deformed:
+      targets_criterions:
+        CT:
+          criterions_loader:
+            impactsynth.metrics:LPIPS:
+              model: vgg
+  Dataset:
+    groups_src:
+      CT:
+        groups_dest:
+          CT:
+            transforms:
+              Clip:
+                min_value: -1024
+                max_value: 1024
+                save_clip_min: true
+                save_clip_max: true
+                mask: None
+              Normalize:
+                lazy: false
+                channels: None
+                min_value: -1
+                max_value: 1
+                inverse: false
+      CT_deformed:
+        groups_dest:
+          CT_deformed:
+            transforms:
+              Clip:
+                min_value: -1024
+                max_value: 1024
+                save_clip_min: true
+                save_clip_max: true
+                mask: None
+              Normalize:
+                lazy: false
+                channels: None
+                min_value: -1
+                max_value: 1
+                inverse: false
+    subset: None
+    dataset_filenames:
+    - $dataset:a:mha
+    validation: None
+  train_name: $name

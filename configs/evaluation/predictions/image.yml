@@ -1,0 +1,36 @@
+# MAE, PSNR and SSIM in the patient mask. The SSIM uses a dynamic range of 4024 HU (1024 + 3000); PSNR keeps
+# KonfAI's default, 4095 HU.
+# Filled in by scripts/evaluate.py: reference image (CT or CT_ELX), prepared dataset, predictions
+# folder, patient list and run name.
+Evaluator:
+  metrics:
+    sCT:
+      targets_criterions:
+        CT;MASK:
+          criterions_loader:
+            MAE:
+              reduction: mean
+            SSIM:
+              dynamic_range: 4024
+            PSNR:
+              dynamic_range: None
+  Dataset:
+    groups_src:
+      MASK:
+        groups_dest:
+          MASK:
+            transforms: None
+      $target:
+        groups_dest:
+          CT:
+            transforms: None
+      sCT:
+        groups_dest:
+          sCT:
+            transforms: None
+    subset: $subset
+    dataset_filenames:
+    - $dataset:a:mha
+    - $predictions:i:mha
+    validation: None
+  train_name: $name

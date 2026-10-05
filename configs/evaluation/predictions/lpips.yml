@@ -1,0 +1,51 @@
+# LPIPS (x100 in the tables).
+# Filled in by scripts/evaluate.py: reference image (CT or CT_ELX), prepared dataset, predictions
+# folder, patient list and run name.
+Evaluator:
+  metrics:
+    sCT:
+      targets_criterions:
+        CT:
+          criterions_loader:
+            impactsynth.metrics:LPIPS:
+              model: vgg
+  Dataset:
+    groups_src:
+      $target:
+        groups_dest:
+          CT:
+            transforms:
+              Clip:
+                min_value: -1024
+                max_value: 1024
+                save_clip_min: true
+                save_clip_max: true
+                mask: None
+              Normalize:
+                lazy: false
+                channels: None
+                min_value: -1
+                max_value: 1
+                inverse: false
+      sCT:
+        groups_dest:
+          sCT:
+            transforms:
+              Clip:
+                min_value: -1024
+                max_value: 1024
+                save_clip_min: true
+                save_clip_max: true
+                mask: None
+              Normalize:
+                lazy: false
+                channels: None
+                min_value: -1
+                max_value: 1
+                inverse: false
+    subset: $subset
+    dataset_filenames:
+    - $dataset:a:mha
+    - $predictions:i:mha
+    validation: None
+  train_name: $name

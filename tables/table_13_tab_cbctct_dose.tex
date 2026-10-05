@@ -1,0 +1,34 @@
+\begin{table*}[h!]
+\centering
+\scriptsize
+\renewcommand{\arraystretch}{1}
+\setlength{\tabcolsep}{4pt}
+\caption{Official ranking for the CBCT$\rightarrow$CT synthesis task based on dosimetric evaluation metrics. Performance is reported using dose-based metrics (Dose MAE, DVH) and gamma pass rate (GPR), for both $\gamma$ and $p$ criteria. The top 5 performing teams and the challenge baseline are shown. Our method (BreizhCT) ranks 3rd overall.}
+\label{tab:cbctct_dose}
+\begin{tabular}{clcccccc}
+\toprule
+\textbf{\#} & \textbf{Team} 
+& \textbf{Dose MAE$_\gamma\downarrow$} 
+& \textbf{Dose MAE$_p\downarrow$} 
+& \textbf{DVH$_\gamma\downarrow$} 
+& \textbf{DVH$_p\downarrow$} 
+& \textbf{GPR$_\gamma\uparrow$} 
+& \textbf{GPR$_p\uparrow$} \\
+\midrule
+\textbf{1} & GlassCity (MixCT) 
+& \textbf{0.004} & \textbf{0.017} & \textbf{0.013} & \textbf{0.034} & 99.300 & 88.640 \\
+\textbf{2} & JavierSequeiro 
+& 0.005 & 0.018 & 0.015 & 0.036 & 99.312 & 87.765 \\
+\textbf{3} & \textcolor{cyan}{Valentin (BreizhCT)} 
+& \textcolor{cyan}{0.005} & \textcolor{cyan}{0.020} & \textcolor{cyan}{0.015} & \textcolor{cyan}{0.036} & \textcolor{cyan}{99.308} & \textcolor{cyan}{86.407} \\
+\textbf{4} & ayuan (et) 
+& 0.005 & 0.018 & 0.015 & 0.039 & 99.227 & 87.405 \\
+\textbf{5} & RicardoBrioso 
+& 0.006 & 0.021 & 0.017 & 0.046 & 98.948 & 84.989 \\
+\midrule
+\textbf{14} & MaartenTerpstra (baseline) 
+& 0.036 & 0.094 & 0.184 & 0.482 & 76.393 & 59.136 \\
+\bottomrule
+\end{tabular}
+
+\end{table*}

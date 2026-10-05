@@ -1,0 +1,26 @@
+\begin{table}[t]
+\centering
+\small
+\setlength{\tabcolsep}{6pt}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{lcc}
+\toprule
+Region & Task 1 & Task 2 \\
+\midrule
+AB & +41.2\% & +27.6\% \\
+HN & +20.7\% & +1.2\% \\
+TH & +20.7\% & +12.1\% \\
+AB/HN/TH & +29.7\% & +12.5\% \\
+\addlinespace[0.25em]
+\hline
+\hline
+\addlinespace[0.25em]
+brain & +2.7\% & +1.0\% \\
+pelvis & +116.1\% & +21.3\% \\
+brain/pelvis & +41.0\% & +7.1\% \\
+ood & +61.8\% & -35.8\% \\
+\bottomrule
+\end{tabular}
+\caption{Relative change of ELX versus IMPACT for Uncertainty with the MAE criterion, computed as $(ELX-IMPACT)/IMPACT \times 100$. Positive values mean ELX is higher; negative values mean ELX is lower. The \texttt{ood} row is included in the same table; for Task 2 it aggregates AB\_ood, HN\_ood, and TH\_ood.}
+\label{tab:cv_uncertainty_mae_percentage}
+\end{table}

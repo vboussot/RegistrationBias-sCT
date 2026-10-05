@@ -1,0 +1,32 @@
+\begin{table}[h!]
+\centering
+\fontsize{7.5}{9}\selectfont
+\setlength{\tabcolsep}{2.2pt}
+\renewcommand{\arraystretch}{1.18}
+\caption{Aggregate in-distribution performance for all combinations of registration strategies used during training and evaluation. Results are pooled across the AB, HN, and TH regions. Complete regional results are reported in Appendix~\ref{app:registration_results}.
+}
+\label{tab:registration_consistency_aggregate}
+\begin{tabular}{@{}lcccccc@{}}
+\toprule
+& \multicolumn{3}{c}{Task 1} & \multicolumn{3}{c}{Task 2} \\
+\cmidrule(lr){2-4} \cmidrule(lr){5-7}
+Train/Eval
+& MAE $\downarrow$ & PSNR $\uparrow$ & SSIM $\uparrow$
+& MAE $\downarrow$ & PSNR $\uparrow$ & SSIM $\uparrow$ \\
+\midrule
+IMPACT/IMPACT
+& \textbf{63.55} & \textbf{29.97} & \textbf{0.927}
+& \textbf{58.76} & \textbf{31.16} & \textbf{0.937} \\
+IMPACT/ELX
+& 72.47 & 28.49 & 0.918
+& 69.17 & 29.13 & 0.920 \\
+ELX/IMPACT
+& 68.31 & 29.37 & 0.920
+& 65.70 & 30.08 & 0.921 \\
+ELX/ELX
+& 66.98 & 29.24 & 0.924
+& 61.28 & 30.22 & 0.930 \\
+\bottomrule
+\end{tabular}
+
+\end{table}

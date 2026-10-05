@@ -1,0 +1,17 @@
+# Python 3.12, PyTorch CUDA 12.8 wheels.
+konfai==1.8.7
+konfai-apps==1.8.7  # KonfAIInference, for the TotalSegmentator Dice
+segmentation-models-pytorch==0.4.0
+torch==2.7.1
+torchvision==0.22.1
+numpy==2.5.2
+scipy==1.18.1
+scikit-image==0.26.0
+SimpleITK==2.5.6
+lpips==0.1.4
+PyYAML==6.0.3
+pandas
+matplotlib
+pytest>=8
+# Training the SAM-supervised models only:
+git+https://github.com/facebookresearch/sam2.git@2b90b9f5ceec907a1c18123530e92e794ad901a4

@@ -1,0 +1,93 @@
+Predictor:
+  Model:
+    classpath: impactsynth.models:UNetpp
+    UNetpp:
+      outputs_criterions: None
+      nb_channel: 5
+  Dataset:
+    groups_src:
+      MASK:
+        groups_dest:
+          MASK:
+            transforms: None
+            patch_transforms: None
+            is_input: false
+      CBCT_IMPACT:
+        groups_dest:
+          CBCT:
+            transforms:
+              Clip:
+                min_value: min
+                max_value: percentile:99.5
+                save_clip_min: false
+                save_clip_max: false
+                mask: None
+              Normalize:
+                lazy: false
+                channels: None
+                min_value: -1
+                max_value: 1
+                inverse: false
+            patch_transforms: None
+            is_input: true
+    augmentations:
+      DataAugmentation_0:
+        data_augmentations:
+          Flip:
+            f_prob: [0, 1, 0]
+            prob: 1
+        nb: 1
+      DataAugmentation_1:
+        data_augmentations:
+          Flip:
+            f_prob: [0, 0, 1]
+            prob: 1
+        nb: 1
+    Patch:
+      patch_size: [1, 512, 512]
+      overlap: None
+      pad_value: -1
+      extend_slice: 4
+    subset: ./data/splits/task_2/Validation.txt
+    dataset_filenames:
+      - ./data/processed/synthrad2025/Task_2/AB:a:mha
+      - ./data/processed/synthrad2025/Task_2/HN:a:mha
+      - ./data/processed/synthrad2025/Task_2/TH:a:mha
+      - ./data/processed/synthrad2023/Task_2/brain:a:mha
+      - ./data/processed/synthrad2023/Task_2/pelvis:a:mha
+      - ./data/processed/external/Task_2/AB_ood:a:mha
+      - ./data/processed/external/Task_2/HN_ood:a:mha
+      - ./data/processed/external/Task_2/TH_ood:a:mha
+    batch_size: 32
+  outputs_dataset:
+    Head:Tanh:
+      OutputDataset:
+        name_class: OutputDataset
+        before_reduction_transforms:
+          UnNormalize:
+            min_value: -1024
+            max_value: 3071
+          TensorCast:
+            dtype: int16
+            inverse: false
+          Mask:
+            path: MASK
+            value_outside: -1024
+        after_reduction_transforms:
+          InferenceStack:
+            dataset: predictions/task_2_impact_tta/Output:mha
+            name: InferenceStack
+            mode: mean
+        final_transforms: None
+        dataset_filename: Output:mha
+        group: sCT
+        same_as_group: CBCT_IMPACT:CBCT
+        patch_combine: None
+        reduction: Concat
+        Concat: {}
+  combine: Concat
+  train_name: task_2_impact_tta
+  manual_seed: None
+  gpu_checkpoints: None
+  autocast: false
+  data_log: None

@@ -1,0 +1,25 @@
+\begin{table*}[h!]
+\centering
+\scriptsize
+\renewcommand{\arraystretch}{1}
+\setlength{\tabcolsep}{5pt}
+\caption{
+Official ranking for the CBCT$\rightarrow$CT synthesis task based on challenge evaluation metrics. Performance is reported using commonly used image similarity metrics (MAE, PSNR, MS-SSIM) and segmentation-based metrics (Dice, HD95). The top 5 performing teams and the challenge baseline are shown. Our method (BreizhCT) ranks 3rd overall.
+}
+\label{tab:cbctct_image}
+\begin{tabular}{clccccc}
+\toprule
+\textbf{\#} & \textbf{Team} & \textbf{MAE$\downarrow$} & \textbf{PSNR$\uparrow$} & \textbf{MS-SSIM$\uparrow$} & \textbf{Dice$\uparrow$} & \textbf{HD95$\downarrow$} \\
+\midrule
+\textbf{1} & GlassCity (MixCT)         & \textbf{48.27}  & \textbf{32.62} & \textbf{0.968} & \textbf{0.857} & \textbf{4.53} \\
+\textbf{2} & JavierSequeiro            & 52.49  & 31.91 & 0.964 & 0.846 & 4.87 \\
+\textbf{3} & \textcolor{cyan}{Valentin (BreizhCT)} 
+& \textcolor{cyan}{53.09}  & \textcolor{cyan}{32.49} & \textcolor{cyan}{0.966} & \textcolor{cyan}{0.843} & \textcolor{cyan}{5.08} \\
+\textbf{4} & ayuan (et)                & 53.61  & 31.89 & 0.963 & 0.842 & 4.99 \\
+\textbf{5} & RicardoBrioso             & 62.75  & 31.01 & 0.952 & 0.801 & 6.65 \\
+\midrule
+\textbf{14} & MaartenTerpstra (baseline) & 308.99 & 18.77 & 0.505 & 0.004 & 133.48 \\
+\bottomrule
+\end{tabular}
+
+\end{table*}

@@ -1,0 +1,23 @@
+\begin{table}[h!]
+\centering
+\small
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1.15}
+\caption{Downstream Dice scores obtained after training with MAE, VGG-based perceptual, or SAM-based perceptual supervision. All models use IMPACT-based training pairs. For Task 2, $AB_{\mathrm{sim}}$, $HN_{\mathrm{sim}}$, and $TH_{\mathrm{sim}}$ denote registration-free simulated CBCT evaluations. Complete region-wise Dice and SSIM results are reported in Appendix~\ref{app:sam_results}.}
+\label{tab:sam_dice_compact}
+\begin{tabular}{llccc}
+\toprule
+Task & Evaluation set & MAE & VGG & SAM \\
+\midrule
+Task 1 & AB/HN/TH & 0.711 & 0.712 & \textbf{0.738} \\
+Task 1 & Brain/Pelvis & 0.749 & 0.772 & \textbf{0.806} \\
+Task 1 & Ext-T2 & 0.665 & 0.672 & \textbf{0.725} \\
+\midrule
+Task 2 & AB/HN/TH & 0.695 & 0.683 & \textbf{0.700} \\
+Task 2 & $AB_{\mathrm{sim}}$ & 0.709 & 0.723 & \textbf{0.764} \\
+Task 2 & $HN_{\mathrm{sim}}$ & 0.734 & 0.750 & \textbf{0.755} \\
+Task 2 & $TH_{\mathrm{sim}}$ & 0.722 & 0.741 & \textbf{0.758} \\
+\bottomrule
+\end{tabular}
+
+\end{table}

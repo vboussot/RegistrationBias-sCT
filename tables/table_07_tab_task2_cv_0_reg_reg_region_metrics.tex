@@ -1,0 +1,25 @@
+\begin{table}[h!]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{6pt}
+\renewcommand{\arraystretch}{1.25}
+\caption{Registration-based deformation measure between the input CBCT and the synthesized image for Task 2, using the IMPACT-Reg metric M297. Values report the relative percentage difference between ELX and IMPACT. Positive values indicate larger deformation for ELX compared to IMPACT. Results are reported across anatomical regions for models trained with the SAM criterion. Statistical significance is assessed using paired Wilcoxon signed-rank tests on matched patients.
+}
+\label{tab:task2_cv_0_reg_reg_region_metrics}
+\begin{tabular}{lc}
+\toprule
+Region & IMPACT vs ELX \\
+\midrule
+AB  & 124.25\%$^{***}$ \\
+HN & 136.65\%$^{***}$ \\
+TH  & 3.59\%$^{**}$ \\
+AB/HN/TH & 81.82\%$^{***}$ \\
+\addlinespace[0.25em]
+\hline
+\hline
+\addlinespace[0.25em]
+Sim-CBCT  & 9.65\%$^{***}$ \\
+\bottomrule
+\end{tabular}
+
+\end{table}

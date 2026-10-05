@@ -1,0 +1,33 @@
+# Table 9 Reg. MAE/PSNR/SSIM. Rendered by scripts/registration_controls/evaluate_registration_controls.py.
+# The SSIM uses a dynamic range of 4024 HU (1024 + 3000); PSNR keeps KonfAI's default, 4095 HU.
+Evaluator:
+  metrics:
+    CT_deformed:
+      targets_criterions:
+        CT;MASK:
+          criterions_loader:
+            MAE:
+              reduction: mean
+            SSIM:
+              dynamic_range: 4024
+            PSNR:
+              dynamic_range: None
+  Dataset:
+    groups_src:
+      MASK:
+        groups_dest:
+          MASK:
+            transforms: None
+      CT:
+        groups_dest:
+          CT:
+            transforms: None
+      CT_deformed:
+        groups_dest:
+          CT_deformed:
+            transforms: None
+    subset: None
+    dataset_filenames:
+    - $dataset:a:mha
+    validation: None
+  train_name: $name

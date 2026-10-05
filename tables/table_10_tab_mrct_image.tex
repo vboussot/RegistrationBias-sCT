@@ -1,0 +1,24 @@
+\begin{table*}[h!]
+\centering
+\scriptsize
+\renewcommand{\arraystretch}{1}
+\setlength{\tabcolsep}{5pt}
+\caption{
+Official ranking for the MR$\rightarrow$CT synthesis task based on the challenge evaluation metrics. Performance is reported using commonly used image similarity metrics (MAE, PSNR, MS-SSIM) and segmentation-based metrics (Dice, HD95). The top 5 performing teams and the challenge baseline are shown. Our method (BreizhCT) ranks 3rd overall.
+}
+\label{tab:mrct_image}
+\begin{tabular}{clccccc}
+\toprule
+\textbf{\#} & \textbf{Team} & \textbf{MAE$\downarrow$} & \textbf{PSNR$\uparrow$} & \textbf{MS-SSIM$\uparrow$} & \textbf{Dice$\uparrow$} & \textbf{HD95$\downarrow$} \\
+\midrule
+\textbf{1} & FelixSun (KoalAI)      & \textbf{64.81}  & \textbf{29.997} & \textbf{0.936} & 0.779 & 6.01 \\
+\textbf{2} & JavierSequeiro         & 65.51  & 29.611 & 0.933 & 0.766 & 6.32 \\
+\textbf{3} & \textcolor{cyan}{Valentin (BreizhCT)} & \textcolor{cyan}{67.24}  & \textcolor{cyan}{29.957} & \textcolor{cyan}{0.935} & \textcolor{cyan}{0.737} & \textcolor{cyan}{7.51} \\
+\textbf{4} & siyuanmei (MixCT)      & 67.90  & 29.628 & 0.931 & 0.785 & 5.77 \\
+\textbf{5} & hanbingocean (QWER)    & 75.68  & 28.756 & 0.922 & 0.715 & 7.69 \\
+\midrule
+\textbf{14} & MaartenTerpstra (baseline) & 309.28 & 18.630 & 0.466 & 0.006 & 136.34 \\
+\bottomrule
+\end{tabular}
+
+\end{table*}

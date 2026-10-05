@@ -1,0 +1,15 @@
+#!/usr/bin/env python3
+"""rtksimulatedgeometry of the itk-rtk wheel, with the conventions of the C++ tool that cbct_synthesis.py uses:
+--size for --dimension, and negative values after an option (--origin -179,...)."""
+import sys
+from itk import rtksimulatedgeometry
+
+argv = ["--dimension" if a == "--size" else a for a in sys.argv[1:]]
+joined = []
+for a in argv:
+    if joined and joined[-1].startswith("--") and "=" not in joined[-1] and a.startswith("-") and a[1:2].isdigit():
+        joined[-1] += "=" + a
+    else:
+        joined.append(a)
+sys.argv = sys.argv[:1] + joined
+sys.exit(rtksimulatedgeometry.main())

@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "registration-bias-sct"
+version = "0.1.0"
+description = "Reproducibility package for registration-induced bias in supervised synthetic CT generation"
+readme = "README.md"
+license = "Apache-2.0"
+requires-python = ">=3.11"
+dependencies = [
+  "konfai==1.8.7",
+  "konfai-apps==1.8.7",
+  "segmentation-models-pytorch==0.4.0",
+  "torch>=2.7",
+  "torchvision>=0.22",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]

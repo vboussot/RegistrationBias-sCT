@@ -1,0 +1,74 @@
+\begin{table*}[h!]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.12}
+\caption{Registration-induced metric sensitivity (Reg., CT-derived controls) versus representative supervised sCT performance (Sup.). Red: supervised result better than the control. Orange: worse by more than 10\%. Uncolored: within 10\%.}
+\label{tab:registration-supervised-comparison-all}
+\begin{tabular}{lllcccccc}
+\toprule
+Task & Region & Type & MAE $\downarrow$ & PSNR $\uparrow$ & SSIM $\uparrow$ & $d_{\mathrm{SAM}}$ $\downarrow$ & LPIPS $\downarrow$ & Dice $\uparrow$ \\
+\midrule
+
+\multirow{10}{*}{Task 1}
+& \multirow{2}{*}{AB} & Reg.
+& $66.45 \pm 13.58$ & $28.34 \pm 1.38$ & $0.908 \pm 0.027$ & $28.448 \pm 6.007$ & $10.8 \pm 3.5$ & $0.839 \pm 0.040$ \\
+& & Sup.
+& \betterfloor{$64.89$} & \betterfloor{$29.10$} & \betterfloor{$0.91$} & \betterfloor{$26.70$} & \betterfloor{$10.7$} & $0.777$ \\
+
+& \multirow{2}{*}{HN} & Reg.
+& $62.96 \pm 13.87$ & $29.43 \pm 1.71$ & $0.953 \pm 0.020$ & $11.342 \pm 2.975$ & $2.5 \pm 0.8$ & $0.818 \pm 0.072$ \\
+& & Sup.
+& $65.15$ & \betterfloor{$30.20$} & $0.94$ & $11.96$ & \worsefive{$3.1$} & \worsefive{$0.731$} \\
+
+& \multirow{2}{*}{TH} & Reg.
+& $53.00 \pm 13.30$ & $30.71 \pm 2.13$ & $0.950 \pm 0.014$ & $21.936 \pm 5.210$ & $7.1 \pm 2.4$ & $0.803 \pm 0.046$ \\
+& & Sup.
+& \worsefive{$60.07$} & \betterfloor{$30.76$} & $0.94$ & \betterfloor{$20.50$} & $7.2$ & \worsefive{$0.706$} \\
+
+& \multirow{2}{*}{AB/HN/TH} & Reg.
+& $60.02 \pm 13.85$ & $29.28 \pm 1.85$ & $0.927 \pm 0.035$ & $20.736 \pm 8.527$ & $6.8 \pm 0.042$ & $0.820 \pm 0.056$ \\
+& & Sup.
+& $64.81 \pm 21.25$ & \betterfloor{$29.997 \pm 2.759$} & \betterfloor{$0.936 \pm 0.050$} & \betterfloor{$19.85 \pm 7.26$} & $7.0 \pm 3.8$ & $0.738 \pm 0.055$ \\
+
+\cmidrule(lr){2-9}
+
+& \multirow{2}{*}{Brain/Pelvis} & Reg.
+& $59.18 \pm 12.50$ & $28.96 \pm 1.52$ & $0.914 \pm 0.038$ & $14.397 \pm 8.459$ & $4.8 \pm 4.1$ & $0.886 \pm 0.060$ \\
+& & Sup.
+& \betterfloor{$58.83 \pm 13.41$} & \betterfloor{$29.61 \pm 1.79$} & $0.885 \pm 0.029$ & -- & -- & -- \\
+
+\midrule
+
+\multirow{10}{*}{Task 2}
+& \multirow{2}{*}{AB} & Reg.
+& $55.88 \pm 13.86$ & $29.78 \pm 1.84$ & $0.930 \pm 0.025$ & $17.348 \pm 4.548$ & $5.5 \pm 2.1$ & $0.745 \pm 0.058$ \\
+& & Sup.
+& $58.46$ & \betterfloor{$31.33$} & $0.90$ & $18.10$ & \worsefive{$6.6$} & \worsefive{$0.670$} \\
+
+& \multirow{2}{*}{HN} & Reg.
+& $69.50 \pm 22.42$ & $28.46 \pm 2.50$ & $0.945 \pm 0.023$ & $10.198 \pm 1.967$ & $2.0 \pm 0.6$ & $0.749 \pm 0.082$ \\
+& & Sup.
+& \betterfloor{$60.97$} & \betterfloor{$30.38$} & $0.94$ & \betterfloor{$9.50$} & $2.1$ & $0.720$ \\
+
+& \multirow{2}{*}{TH} & Reg.
+& $52.87 \pm 16.63$ & $30.96 \pm 2.57$ & $0.932 \pm 0.019$ & $16.532 \pm 3.741$ & $4.8 \pm 1.7$ & $0.784 \pm 0.066$ \\
+& & Sup.
+& \betterfloor{$50.40$} & \betterfloor{$31.78$} & $0.92$ & \betterfloor{$16.12$} & \worsefive{$5.4$} & $0.720$ \\
+
+& \multirow{2}{*}{AB/HN/TH} & Reg.
+& $53.42 \pm 20.18$ & $30.46 \pm 2.82$ & $0.938 \pm 0.031$ & $14.510 \pm 4.793$ & $4.0 \pm 2.2$ & $0.759 \pm 0.072$ \\
+& & Sup.
+& \betterfloor{$48.28 \pm 13.35$} & \betterfloor{$32.619 \pm 2.307$} & \betterfloor{$0.968 \pm 0.025$} & \betterfloor{$14.36 \pm 5.10$} & \worsefive{$4.6 \pm 2.6$} & $0.700 \pm 0.082$ \\
+
+\cmidrule(lr){2-9}
+
+& \multirow{2}{*}{Brain/Pelvis} & Reg.
+& $39.50 \pm 13.09$ & $32.15 \pm 2.61$ & $0.942 \pm 0.043$ & $12.625 \pm 9.736$ & $4.0 \pm 4.6$ & $0.866 \pm 0.089$ \\
+& & Sup.
+& \worsefive{$49.95 \pm 11.78$} & $30.79 \pm 2.00$ & $0.906 \pm 0.036$ & -- & -- & -- \\
+
+\bottomrule
+\end{tabular}
+
+\end{table*}

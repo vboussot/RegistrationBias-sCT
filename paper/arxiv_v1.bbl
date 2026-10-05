@@ -1,0 +1,216 @@
+\begin{thebibliography}{10}
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \def\href#1#2{#2} \def\path#1{#1}\fi
+
+\bibitem{edmund2017review}
+J.~M. Edmund, T.~Nyholm, A review of substitute ct generation for mri-only
+  radiation therapy, Radiation Oncology 12~(1) (2017) 28.
+
+\bibitem{dayarathna2024deep}
+S.~Dayarathna, K.~T. Islam, S.~Uribe, G.~Yang, M.~Hayat, Z.~Chen, Deep learning
+  based synthesis of mri, ct and pet: Review and analysis, Medical image
+  analysis 92 (2024) 103046.
+
+\bibitem{goodhart1975problems}
+C.~A. Goodhart, Problems of monetary management: The uk experience, in: Papers
+  in Monetary Economics, Vol.~1, Reserve Bank of Australia, Sydney, 1975, pp.
+  1--20.
+
+\bibitem{nyholm2018mr}
+T.~Nyholm, S.~Svensson, S.~Andersson, J.~Jonsson, M.~Sohlin, C.~Gustafsson,
+  E.~Kjell{\'e}n, K.~S{\"o}derstr{\"o}m, P.~Albertsson, L.~Blomqvist, et~al.,
+  Mr and ct data with multiobserver delineations of organs in the pelvic
+  area—part of the gold atlas project, Medical physics 45~(3) (2018)
+  1295--1300.
+
+\bibitem{florkow2019impact}
+M.~Florkow, F.~Zijlstra, L.~Kerkmeijer, M.~Maspero, C.~van~den Berg, M.~van
+  Stralen, P.~Seevinck, The impact of mri-ct registration errors on deep
+  learning-based synthetic ct generation, in: Medical Imaging 2019: Image
+  Processing, Vol. 10949, SPIE, 2019, pp. 831--7.
+
+\bibitem{kong2021breaking}
+L.~Kong, C.~Lian, D.~Huang, Y.~Hu, Q.~Zhou, et~al., Breaking the dilemma of
+  medical image-to-image translation, Advances in Neural Information Processing
+  Systems 34 (2021) 1964--1978.
+
+\bibitem{zhou2023mitigating}
+L.~Zhou, X.~Ni, Y.~Kong, H.~Zeng, M.~Xu, J.~Zhou, Q.~Wang, C.~Liu, Mitigating
+  misalignment in mri-to-ct synthesis for improved synthetic ct generation: an
+  iterative refinement and knowledge distillation approach, Physics in Medicine
+  \& Biology 68~(24) (2023) 245020.
+
+\bibitem{li2025boosting}
+C.~Li, Z.~Chen, Y.~Zhang, L.~Zhong, W.~Yang, Boosting medical image synthesis
+  via registration-guided consistency and disentanglement learning, in:
+  International Conference on Medical Image Computing and Computer-Assisted
+  Intervention, Springer, 2025, pp. 78--88.
+
+\bibitem{lee2025meta}
+J.~Lee, D.~Kim, T.~Kim, M.~A. Al-Masni, Y.~Han, D.-H. Kim, K.~Ryu,
+  Meta-learning guidance for robust medical image synthesis: Addressing the
+  real-world misalignment and corruptions, Computerized Medical Imaging and
+  Graphics 121 (2025) 102506.
+
+\bibitem{dohmen2024similarity}
+M.~Dohmen, M.~Klemens, I.~Baltruschat, T.~Truong, M.~Lenga, Similarity metrics
+  for mr image-to-image translation, arXiv e-prints (2024) arXiv--2405.
+
+\bibitem{hemon2026towards}
+C.~H{\'e}mon, B.~Texier, C.~Lafond, J.-C. Nunes, A.~Barateau, Towards
+  trustworthy ai in radiotherapy: a comprehensive review of uncertainty-aware
+  techniques, Physics in Medicine \& Biology 71~(1) (2026) 01TR01.
+
+\bibitem{kirillov2023segment}
+A.~Kirillov, E.~Mintun, N.~Ravi, H.~Mao, C.~Rolland, L.~Gustafson, T.~Xiao,
+  S.~Whitehead, A.~C. Berg, W.-Y. Lo, et~al., Segment anything, in: Proceedings
+  of the IEEE/CVF international conference on computer vision, 2023, pp.
+  4015--4026.
+
+\bibitem{mcnaughton2023machine}
+J.~McNaughton, J.~Fernandez, S.~Holdsworth, B.~Chong, V.~Shim, A.~Wang, Machine
+  learning for medical image translation: A systematic review, Bioengineering
+  10~(9) (2023) 1078.
+
+\bibitem{kaji2019overview}
+S.~Kaji, S.~Kida, Overview of image-to-image translation by use of deep neural
+  networks: denoising, super-resolution, modality conversion, and
+  reconstruction in medical imaging, arXiv preprint arXiv:1905.08603 (2019).
+
+\bibitem{roh2024ct}
+J.~Roh, D.~Ryu, J.~Lee, Ct synthesis with deep learning for mr-only
+  radiotherapy planning: a review, Biomedical Engineering Letters 14~(6) (2024)
+  1259--1278.
+
+\bibitem{liu2021ct}
+Y.~Liu, A.~Chen, H.~Shi, S.~Huang, W.~Zheng, Z.~Liu, Q.~Zhang, X.~Yang, Ct
+  synthesis from mri using multi-cycle gan for head-and-neck radiation therapy,
+  Computerized medical imaging and graphics 91 (2021) 101953.
+
+\bibitem{dowling2022image}
+J.~Dowling, L.~O'Connor, O.~Acosta, P.~Raniga, R.~de~Crevoisier, J.-C. Nunes,
+  A.~Barateau, H.~Chourak, J.~H. Choi, P.~Greer, Image synthesis for mri-only
+  radiotherapy treatment planning, in: Biomedical Image Synthesis and
+  Simulation, Elsevier, 2022, pp. 423--445.
+
+\bibitem{altalib2025synthetic}
+A.~Altalib, S.~McGregor, C.~Li, A.~Perelli, Synthetic ct image generation from
+  cbct: a systematic review, IEEE Transactions on Radiation and Plasma Medical
+  Sciences 9~(6) (2025) 691--707.
+
+\bibitem{bishop2006pattern}
+C.~M. Bishop, N.~M. Nasrabadi, Pattern recognition and machine learning,
+  Springer, 2006.
+
+\bibitem{koenker2001quantile}
+R.~Koenker, K.~F. Hallock, Quantile regression, Journal of economic
+  perspectives 15~(4) (2001) 143--156.
+
+\bibitem{rassmann2026regression}
+S.~Rassmann, D.~K{\"u}gler, C.~Ewert, M.~Reuter, Regression is all you need for
+  medical image translation, IEEE Transactions on Medical Imaging (2026).
+
+\bibitem{johnson2016perceptual}
+J.~Johnson, A.~Alahi, L.~Fei-Fei, Perceptual losses for real-time style
+  transfer and super-resolution, in: European conference on computer vision,
+  Springer, 2016, pp. 694--711.
+
+\bibitem{isola2017image}
+P.~Isola, J.-Y. Zhu, T.~Zhou, A.~A. Efros, Image-to-image translation with
+  conditional adversarial networks, in: Proceedings of the IEEE conference on
+  computer vision and pattern recognition, 2017, pp. 1125--1134.
+
+\bibitem{ho2020denoising}
+J.~Ho, A.~Jain, P.~Abbeel, Denoising diffusion probabilistic models, Advances
+  in neural information processing systems 33 (2020) 6840--6851.
+
+\bibitem{zimmermann2026eliminating}
+L.~Zimmermann, M.~Rauter, M.~Schmid, D.~Georg, B.~Kn{\"a}usl, Eliminating
+  registration bias in synthetic ct generation: A physics-based simulation
+  framework, arXiv preprint arXiv:2602.02130 (2026).
+
+\bibitem{rossi2021comparison}
+M.~Rossi, P.~Cerveri, Comparison of supervised and unsupervised approaches for
+  the generation of synthetic ct from cone-beam ct, Diagnostics 11~(8) (2021)
+  1435.
+
+\bibitem{xin2024deformation}
+B.~Xin, T.~Young, C.~E. Wainwright, T.~Blake, L.~Lebrat, T.~Gaass, T.~Benkert,
+  A.~Stemmer, D.~Coman, J.~Dowling, Deformation-aware gan for medical image
+  synthesis with substantially misaligned pairs, arXiv preprint
+  arXiv:2408.09432 (2024).
+
+\bibitem{thummerer2025synthrad2025}
+A.~Thummerer, E.~van~der Bijl, A.~J. Galapon, F.~Kamp, M.~Savenije, C.~Muijs,
+  S.~Aluwini, R.~J. Steenbakkers, S.~Beuel, M.~P. Intven, et~al., Synthrad2025
+  grand challenge dataset: Generating synthetic cts for radiotherapy from head
+  to abdomen, Medical physics 52~(7) (2025) e17981.
+
+\bibitem{huijben2024generating}
+E.~M. Huijben, M.~L. Terpstra, S.~Pai, A.~Thummerer, P.~Koopmans, M.~Afonso,
+  M.~Van~Eijnatten, O.~Gurney-Champion, Z.~Chen, Y.~Zhang, et~al., Generating
+  synthetic computed tomography for radiotherapy: Synthrad2023 challenge
+  report, Medical image analysis 97 (2024) 103276.
+
+\bibitem{klein2009elastix}
+S.~Klein, M.~Staring, K.~Murphy, M.~A. Viergever, J.~P. Pluim, Elastix: a
+  toolbox for intensity-based medical image registration, IEEE transactions on
+  medical imaging 29~(1) (2009) 196--205.
+
+\bibitem{boussot2025impact}
+V.~Boussot, C.~H{\'e}mon, J.-C. Nunes, J.~Dowling, S.~Rouz{\'e}, C.~Lafond,
+  A.~Barateau, J.-L. Dillenseger, Impact: a generic semantic loss for
+  multimodal medical image registration, arXiv preprint arXiv:2503.24121
+  (2025).
+
+\bibitem{zhou2018unet++}
+Z.~Zhou, M.~M. Rahman~Siddiquee, N.~Tajbakhsh, J.~Liang, Unet++: A nested u-net
+  architecture for medical image segmentation, in: International workshop on
+  deep learning in medical image analysis, Springer, 2018, pp. 3--11.
+
+\bibitem{ravi2024sam2}
+N.~Ravi, V.~Gabeur, Y.-T. Hu, R.~Hu, C.~Ryali, T.~Ma, H.~Khedr, R.~R{\"a}dle,
+  C.~Rolland, L.~Gustafson, E.~Mintun, J.~Pan, K.~V. Alwala, N.~Carion, C.-Y.
+  Wu, R.~Girshick, P.~Doll{\'a}r, C.~Feichtenhofer, Sam 2: Segment anything in
+  images and videos, arXiv preprint arXiv:2408.00714 (2024).
+
+\bibitem{zhang2018unreasonable}
+R.~Zhang, P.~Isola, A.~A. Efros, E.~Shechtman, O.~Wang, The unreasonable
+  effectiveness of deep features as a perceptual metric, in: Proceedings of the
+  IEEE conference on computer vision and pattern recognition, 2018, pp.
+  586--595.
+
+\bibitem{dowling2015automatic}
+J.~A. Dowling, J.~Sun, P.~Pichler, D.~Rivest-H{\'e}nault, S.~Ghose,
+  H.~Richardson, C.~Wratten, J.~Martin, J.~Arm, L.~Best, et~al., Automatic
+  substitute computed tomography generation and contouring for magnetic
+  resonance imaging (mri)-alone external beam radiation therapy from standard
+  mri sequences, International Journal of Radiation Oncology* Biology* Physics
+  93~(5) (2015) 1144--1153.
+
+\bibitem{rit2014reconstruction}
+S.~Rit, M.~Vila~Oliva, S.~Brousmiche, R.~Labarbe, D.~Sarrut, G.~C. Sharp, The
+  reconstruction toolkit (rtk), an open-source cone-beam ct reconstruction
+  toolkit based on the insight toolkit (itk), in: Journal of Physics:
+  Conference Series, Vol. 489, 2014, p. 012079.
+
+\bibitem{boussot2025registration}
+V.~Boussot, C.~H{\'e}mon, J.-C. Nunes, J.-L. Dillenseger, Why registration
+  quality matters: Enhancing sct synthesis with impact-based registration,
+  arXiv preprint arXiv:2510.21358 (2025).
+
+\bibitem{wasserthal2023totalsegmentator}
+J.~Wasserthal, H.-C. Breit, M.~T. Meyer, M.~Pradella, D.~Hinck, A.~W. Sauter,
+  T.~Heye, D.~T. Boll, J.~Cyriac, S.~Yang, et~al., Totalsegmentator: robust
+  segmentation of 104 anatomic structures in ct images, Radiology: Artificial
+  Intelligence 5~(5) (2023) e230024.
+
+\bibitem{boussot2025konfai}
+V.~Boussot, J.-L. Dillenseger, Konfai: A modular and fully configurable
+  framework for deep learning in medical imaging, arXiv preprint
+  arXiv:2508.09823 (2025).
+
+\end{thebibliography}

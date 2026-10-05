@@ -1,0 +1,36 @@
+\begin{table*}[h!]
+\centering
+\scriptsize
+\renewcommand{\arraystretch}{1}
+\setlength{\tabcolsep}{4pt}
+\caption{
+Official ranking for the MR$\rightarrow$CT synthesis task based on dosimetric evaluation metrics. Performance is reported using dose-based metrics (Dose MAE, DVH) and gamma pass rate (GPR), for both $\gamma$ and $p$ criteria. The top 5 performing teams and the challenge baseline are shown. Our method (BreizhCT) ranks 3rd overall.
+}
+\label{tab:mrct_dose}
+\begin{tabular}{clcccccc}
+\toprule
+\textbf{\#} & \textbf{Team} 
+& \textbf{Dose MAE$_\gamma\downarrow$} 
+& \textbf{Dose MAE$_p\downarrow$} 
+& \textbf{DVH$_\gamma\downarrow$} 
+& \textbf{DVH$_p\downarrow$} 
+& \textbf{GPR$_\gamma\uparrow$} 
+& \textbf{GPR$_p\uparrow$} \\
+\midrule
+\textbf{1} & FelixSun (KoalAI) 
+& \textbf{0.006} & \textbf{0.024} & \textbf{0.011} & 0.064 & 98.33 & 84.04 \\
+\textbf{2} & JavierSequeiro 
+& 0.006 & 0.024 & 0.011 & \textbf{0.060} & 98.50 & 84.56 \\
+\textbf{3} & \textcolor{cyan}{Valentin (BreizhCT)} 
+& \textcolor{cyan}{0.006} & \textcolor{cyan}{0.027} & \textcolor{cyan}{0.013} & \textcolor{cyan}{0.067} & \textcolor{cyan}{98.88} & \textcolor{cyan}{82.19} \\
+\textbf{4} & siyuanmei (MixCT) 
+& 0.007 & \textbf{0.023} & 0.016 & 0.075 & 98.22 & 81.92 \\
+\textbf{5} & hanbingocean (QWER) 
+& 0.007 & 0.027 & 0.014 & 0.073 & 98.29 & 81.91 \\
+\midrule
+\textbf{14} & MaartenTerpstra (baseline) 
+& 0.056 & 0.152 & 0.094 & 0.451 & 78.08 & 59.59 \\
+\bottomrule
+\end{tabular}
+
+\end{table*}
